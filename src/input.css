@@ -1,1 +1,60 @@
-@import "tailwindcss"; 
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Poppins";
+
+  src:
+    local("Poppins"),
+    url("../public/fonts/Poppins-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins Medium";
+
+  src:
+    local("Poppins Medium"),
+    url("../public/fonts/Poppins-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins SemiBold";
+
+  src:
+    local("Poppins SemiBold"),
+    url("../public/fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins Bold";
+
+  src:
+    local("Poppins Bold"),
+    url("../public/fonts/Poppins-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins Black";
+
+  src:
+    local("Poppins Black"),
+    url("../public/fonts/Poppins-Black.ttf") format("truetype");
+  font-display: swap;
+}
+
+@utility container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+@theme {
+  --font-Poppins: "Poppins";
+  --font-PoppinsMedium: "Poppins Medium";
+  --font-PoppinsSemiBold: "Poppins SemiBold";
+  --font-PoppinsBold: "Poppins Bold";
+  --font-PoppinsBlack: "Poppins Black";
+
+  --color-White-Smoke: #f3f3f3;
+
+  --breakpoint-xs: 430px;
+}

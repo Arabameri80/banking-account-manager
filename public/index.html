@@ -3,8 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>bank</title>
+    <title>bank account</title>
+    <link rel="icon" type="image/png" href="../public/img/logo.png" />
     <link rel="stylesheet" href="../dist/output.css" />
   </head>
-  <body></body>
+  <body class="bg-White-Smoke font-Poppins">
+    <svg class="hidden">
+      <symbol
+        id="arrow-long-right"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+        />
+      </symbol>
+    </svg>
+    <!-- nav -->
+    <nav class="nav">
+      <div class="container flex items-center justify-between">
+        <h1 class="text-[19px] text-gray-800">Log in to get started</h1>
+        <!-- logo -->
+        <img src="../public/img/logo.png" class="size-13" alt="logo" />
+        <!-- log in -->
+        <form class="flex gap-2.5" action="">
+          <input
+            id="log-in"
+            class="w-30 h-9 py-1 px-5 bg-white rounded-[10rem] border-0 outline-0 transition-all text-center focus:ring-1 focus:ring-gray-400 placeholder:text-gray-300"
+            type="text"
+            placeholder="USER"
+          />
+          <input
+            id="log-in"
+            class="w-30 h-9 py-1 px-5 bg-white rounded-[10rem] border-0 outline-0 transition-all text-center focus:ring-1 focus:ring-gray-400 placeholder:text-gray-300"
+            type="password"
+            placeholder="PIN"
+            maxlength="4"
+          />
+          <label for="log-in">
+            <a href="">
+              <svg class="w-5.5 h-9">
+                <use xlink:href="#arrow-long-right"></use>
+              </svg>
+            </a>
+          </label>
+        </form>
+      </div>
+    </nav>
+  </body>
 </html>
