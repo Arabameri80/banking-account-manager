@@ -47,6 +47,13 @@
   padding: 1rem;
 }
 
+@utility bg-linear-deposit {
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+@utility bg-linear-withdraw {
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
 @theme {
   --font-Poppins: "Poppins";
   --font-PoppinsMedium: "Poppins Medium";
@@ -57,4 +64,18 @@
   --color-White-Smoke: #f3f3f3;
 
   --breakpoint-xs: 430px;
+}
+
+@layer components {
+  .movement {
+    @apply flex items-center justify-between;
+  }
+
+  .deposit {
+    @apply w-20 px-2.5 text-white bg-linear-deposit rounded-4xl text-xs uppercase font-PoppinsSemiBold;
+  }
+
+  .withdraw {
+    @apply w-28.5 px-2.5 text-white bg-linear-withdraw rounded-4xl text-xs uppercase font-PoppinsSemiBold;
+  }
 }
