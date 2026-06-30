@@ -38,15 +38,26 @@ const accounts = [account1, account2, account3, account4];
 const movementsContainer = document.querySelector(".movements-container");
 const movements = account1.movements;
 
-movementsContainer.innerHTML = "";
-movements.forEach(function (movement, i) {
-  const type = movement >= 0 ? "deposit" : "withdraw";
-  const html = `<div class="movement">
+const addMovementList = function (movementsContainer, movements) {
+  movementsContainer.innerHTML = "";
+  movements.forEach(function (movement, i) {
+    const type = movement >= 0 ? "deposit" : "withdraw";
+    const html = `<div class="movement">
                   <span class="${type}">${i + 1} ${type}</span>
                   <p class="text-[17px]">${movement}€</p>
                 </div>`;
 
-  movementsContainer.insertAdjacentHTML("afterbegin", html);
-});
+    movementsContainer.insertAdjacentHTML("afterbegin", html);
+  });
+};
+addMovementList(movementsContainer, movements);
 
+const sumOfmovInHeader = document.querySelector(".sumOfmov");
+
+const updateSumOfmovInHeader = function (movements) {
+  const sumOfMov = movements.reduce((mov, sum) => mov + sum);
+  sumOfmovInHeader.textContent = sumOfMov + "€";
+};
+
+updateSumOfmovInHeader(movements);
 // --------------------------DOM-------------------------------
